@@ -2,7 +2,7 @@
 ;tanxin@buaa.edu.cn
 ;Last modified on 2 October 2024
 
-pro fig2r_ctm_rc_v3
+pro fig2r_tmc_rc_v3
   
   mission=['Cluster','THEMIS','MMS']
   up=20.0
@@ -21,7 +21,7 @@ pro fig2r_ctm_rc_v3
     x0=left/dimw
     y0=(dimh-up-(i+1)*hight)/dimh
     position=[x0,y0,x0+width/dimw,y0+hight/dimh]
-    fig2_ctm_rc_panel_v3,mission[i],position
+    fig2r_tmc_rc_panel_v3,mission[i],position
   endfor
   dir='Figures\'
   fn1=dir+'Figure 2R.png'

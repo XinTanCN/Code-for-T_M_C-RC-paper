@@ -3,7 +3,7 @@
 ;Last modified on 2 October 2024
 
 
-pro fig5_ctm_rc_panel_v3,fn=fn,mlt_range,symh_range,L_range,symbol,sym_size,position,font_size,par,id,n,color
+pro fig5_tmc_rc_panel_v3,fn=fn,mlt_range,symh_range,L_range,symbol,sym_size,position,font_size,par,id,n,color
   
   ;------载入数据-------
   if undefined(fn) then begin

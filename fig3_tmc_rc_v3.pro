@@ -1,8 +1,8 @@
-;Cluster、THEMIS、MMS MLAT tilt vs L (Figure 4)
+;Cluster、THEMIS、MMS Jphi vs L (Figure 3)
 ;tanxin@buaa.edu.cn
 ;Last modified on 2 October 2024
 
-pro fig4_ctm_rc_v3
+pro fig3_tmc_rc_v3
   ;---Load data-------
   fn='Data\Result_20231230_mlat30_ep085_cs1.cdf'
   loadcdf,fn,'Epoch',epoch
@@ -32,7 +32,7 @@ pro fig4_ctm_rc_v3
   data_number_threshold=10
   dir='Figures\'
   if file_test(dir) eq 0 then file_mkdir,dir
-
+  
   pos=where(l ge L_shell_min and l le L_shell_max)
   epoch=epoch[pos]
   j_phi=j_phi[pos]
@@ -51,10 +51,10 @@ pro fig4_ctm_rc_v3
   q=q[pos]
   cs=cs[pos]
   mission=mission[pos]
-
+  
   ;* 1/(cos(lat)^3)
   j_phi=j_phi/((cos(lat*!dtor))^3)
-
+  
   up=50.0
   bottom=50.0
   left=90.0
@@ -64,22 +64,19 @@ pro fig4_ctm_rc_v3
   midh=70.0
   midw=100.0
   color=['deep_sky_blue','firebrick'];quiet,storm
-
+    
   ;----Plot-----
   n=5;Number of panels in the vertical direction
   m=2;Number of panels in the horizontal direction
   dimw=left+right+m*width+(m-1)*midw
   dimh=up+2*n*hight+bottom+(n-1)*midh
   flag=[[1,2],[3,4]]
-  w=window(dimension=[dimw,dimh],window_title='Figure 2')
+  w=window(dimension=[dimw,dimh],window_title='Figure 3')
   panel=['(a)','(b)','(c)','(d)','(e)']
   side=['','Dawn','Noon','Dusk','MidN']
   mlt_range=[[0,24],[3,9],[9,15],[15,21],[21,3]]
-  ;  t_y=text((width)/dimw,(dimh-35)/dimh,'$X: L (R_E)  Y: J_{\phi} (nA/m^2)$',font_size=12,font_name='Times', font_style=0,ORIENTATION=0)
-  t_y=text((width-50)/dimw,(dimh-35)/dimh,'$X: L (R_E)  Y: MLAT     Tilt      (\circ)$',font_size=12,font_name='Times', font_style=0,ORIENTATION=0)
-  s_m=symbol(0.54,(dimh-27)/dimh,'+',sym_size=0.75,sym_thick=3)
-  s_t=symbol(0.595,(dimh-27)/dimh,'o',sym_size=0.75,sym_thick=3)
-
+  t_y=text((width)/dimw,(dimh-35)/dimh,'$X: L (R_E)  Y: J_{\phi} (nA/m^2)$',font_size=12,font_name='Times', font_style=0,ORIENTATION=0)
+  
   t_quiet=text(0.66,(dimh-35)/dimh,'$SYM_H \geq -30 nT$',color[0],font_size=12,font_name='Times', font_style=0,ORIENTATION=0)
   t_storm=text(0.82,(dimh-35)/dimh,'$SYM_H < -30 nT$',color[1],font_size=12,font_name='Times', font_style=0,ORIENTATION=0)
   t_x1=text(0.26,(bottom-40)/dimh,'$L   (R_E)$',font_size=12,font_name='Times', font_style=0)
@@ -94,21 +91,22 @@ pro fig4_ctm_rc_v3
         x0=(left+j*(width+midw))/dimw
         y0=(dimh-up-i*(midh+2*hight)-(k+1)*hight)/dimh
         position=[x0,y0,x0+width/dimw,y0+hight/dimh]
-        ;        fig2_ctm_rc_panel_v2,position,flag[j,k],j_phi,l,sym_h,mission,mlt_range[*,i],mlt,color
-;        fig3_ctm_rc_panel_v2,position,flag[j,k],j_phi,l,sym_h,mission,mlt_range[*,i],mlt,color,lat,tilt
-;        fig3_ctm_rc_panel_v2_test,position,flag[j,k],j_phi,l,sym_h,mission,mlt_range[*,i],mlt,color,lat,tilt,epoch
         if (j eq 0) and (k eq 0) then begin
-          fig4_ctm_rc_panel_v3_0,position,flag[j,k],j_phi,l,sym_h,mission,mlt_range[*,i],mlt,color,lat,tilt
+          fig3_tmc_rc_panel_v3_1,position,flag[j,k],j_phi,l,sym_h,mission,mlt_range[*,i],mlt,color
         endif else begin
-          fig4_ctm_rc_panel_v3_1,position,flag[j,k],j_phi,l,sym_h,mission,mlt_range[*,i],mlt,color,lat,tilt
+          fig3_tmc_rc_panel_v3,position,flag[j,k],j_phi,l,sym_h,mission,mlt_range[*,i],mlt,color
         endelse
+
+        
+;        stop
       endfor
     endfor
   endfor
-;  fn1=dir+'Figure 4_n.png'
+;  stop
+  fn1=dir+'Figure 3.png'
 ;  w.save,fn1,RESOLUTION=600,border=0,/overwrite
 ;  w.close
-
-
+    
+  
 ;  stop
 end
