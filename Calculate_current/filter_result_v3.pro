@@ -5,6 +5,7 @@
 pro filter_result_v3
   
   fn='...tcm_rc_result.cdf'
+;  My data file is here: https://zenodo.org/records/13884268
   loadcdf,fn,'Epoch',epoch
   loadcdf,fn,'Jphi',jphi
   loadcdf,fn,'L',l
