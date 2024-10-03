@@ -1,6 +1,6 @@
 ;Added the display of absent data 2024/06/19
 
-pro fig6_ctm_rc_panel_v3,position,mission,activity,RGB_TABLE,L_range
+pro fig6_tmc_rc_panel_v3,position,mission,activity,RGB_TABLE,L_range
   ;  mission='themis'
   ;  activity='quiet'
   ;  position=[0,0,1,1]

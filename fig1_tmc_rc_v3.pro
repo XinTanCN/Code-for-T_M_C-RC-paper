@@ -2,7 +2,7 @@
 ;tanxin@buaa.edu.cn
 ;Last modified on 2 October 2024
 
-pro fig1_ctm_rc_v3
+pro fig1_tmc_rc_v3
   fn='Data\Result_20231122.cdf'
   loadcdf,fn,'Epoch',epoch
   loadcdf,fn,'MLAT',mlat
@@ -36,7 +36,7 @@ pro fig1_ctm_rc_v3
   for i=0,2 do begin
     position=[left/(left+right+width),(bottom+(n-i-1)*hight)/(up+n*hight+bottom),$
       (left+width)/(left+right+width),(bottom+(n-i)*hight)/(up+n*hight+bottom)]
-    fig1_ctm_rc_panel_v3,position,epoch,x,y,tilt,mlat,mission,i,n,color
+    fig1_tmc_rc_panel_v3,position,epoch,x,y,tilt,mlat,mission,i,n,color
   endfor
   x1=0.05
   y1=0.01
