@@ -2,7 +2,7 @@
 ;tanxin@buaa.edu.cn
 ;Last modified on 2 October 2024
 
-pro fig6_ctm_rc_v3
+pro fig6_tmc_rc_v3
   mission=['Cluster','THEMIS','MMS']
   activity=['Quiet','Storm']
   up=40.0
@@ -31,8 +31,7 @@ pro fig6_ctm_rc_v3
       y0=(dimh-up-(i+1)*hight-i*midh)/dimh
       position=[x0,y0,x0+width/dimw,y0+hight/dimh]
       t_panel=text(position[0]+(15/dimw),position[3]-(35/dimh),panel(j,i),'k',font_size=12,font_name='Times', font_style=0,ORIENTATION=0)
-;      fig4_paper2_panel_plot_v2,position,mission[i],activity[j],RGB_TABLE,L_range
-      fig6_ctm_rc_panel_v3,position,mission[i],activity[j],RGB_TABLE,L_range
+      fig6_tmc_rc_panel_v3,position,mission[i],activity[j],RGB_TABLE,L_range
     endfor
   endfor
   for j=0,m-1 do begin

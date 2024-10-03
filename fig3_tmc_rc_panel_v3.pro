@@ -1,6 +1,6 @@
 
 
-pro fig3_ctm_rc_panel_v3,position,flag,jphi,l,symh0,mission,mlt_range,mlt0,color
+pro fig3_tmc_rc_panel_v3,position,flag,jphi,l,symh0,mission,mlt_range,mlt0,color
   L_shell_min=4
   L_shell_max=8
   L_range=[L_shell_min,L_shell_max]

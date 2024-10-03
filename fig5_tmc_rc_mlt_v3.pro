@@ -2,7 +2,7 @@
 ;tanxin@buaa.edu.cn
 ;Last modified on 2 October 2024
 
-pro fig5_ctm_rc_mlt_v3,k,txt
+pro fig5_tmc_rc_mlt_v3,k,txt
   mlt_range=[k,k+1]
   case txt of
     'Quiet':symh_range=[-30,3000]
@@ -33,7 +33,7 @@ pro fig5_ctm_rc_mlt_v3,k,txt
   for i=0,n-1 do begin
     position=[left/(left+right+width),(bottom+(n-i-1)*hight)/(up+n*hight+bottom),$
       (left+width)/(left+right+width),(bottom+(n-i)*hight)/(up+n*hight+bottom)]
-    fig5_ctm_rc_panel_v3,mlt_range,symh_range,L_range,symbol,sym_size,position,font_size,par[i],i,n,color
+    fig5_tmc_rc_panel_v3,mlt_range,symh_range,L_range,symbol,sym_size,position,font_size,par[i],i,n,color
   end
   title=txt+''+strtrim(string(mlt_range[0],format='(i2.2)'),2)+':00-'+strtrim(string(mlt_range[1],format='(i2.2)'),2)+':00 MLT'
   t=text(0.12,(dim[1]-0.65*up)/dim[1],title,font_size=font_size+1,font_name='Times',font_style=0)

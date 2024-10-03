@@ -2,7 +2,7 @@
 ;tanxin@buaa.edu.cn
 ;Last modified on 2 October 2024
 ;
-pro fig1_ctm_rc_panel_v3,position,epoch,x1,y1,tilt1,mlat1,mission,i,n,color
+pro fig1_tmc_rc_panel_v3,position,epoch,x1,y1,tilt1,mlat1,mission,i,n,color
   font_size=12
   sym_size=1
   sym_thick=2

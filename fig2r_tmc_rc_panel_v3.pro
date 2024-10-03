@@ -2,7 +2,7 @@
 ;tanxin@buaa.edu.cn
 ;Last modified on 2 October 2024
 
-pro fig2r_ctm_rc_panel_v3,mission,position
+pro fig2r_tmc_rc_panel_v3,mission,position
 
   fn='Data\Result_20231230_mlat30_ep085_cs1.cdf'
   loadcdf,fn,'Epoch',epoch
