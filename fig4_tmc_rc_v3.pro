@@ -71,7 +71,7 @@ pro fig4_tmc_rc_v3
   dimw=left+right+m*width+(m-1)*midw
   dimh=up+2*n*hight+bottom+(n-1)*midh
   flag=[[1,2],[3,4]]
-  w=window(dimension=[dimw,dimh],window_title='Figure 2')
+  w=window(dimension=[dimw,dimh],window_title='Figure 4')
   panel=['(a)','(b)','(c)','(d)','(e)']
   side=['','Dawn','Noon','Dusk','MidN']
   mlt_range=[[0,24],[3,9],[9,15],[15,21],[21,3]]

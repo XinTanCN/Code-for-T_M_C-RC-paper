@@ -44,9 +44,9 @@ pro fig1_tmc_rc_v3
   font_size=12
   sym_size=2.5
   t=text(x1,y1,'$Tilt Angle$','k',font_size=font_size,font_name='Times',font_style=0)
-  t=text(x1+0.2,y1,'$[min,-11.5\deg]$',color[0],font_size=font_size,font_name='Times',font_style=0)
+  t=text(x1+0.2,y1,'$[-35,-11.5\deg]$',color[0],font_size=font_size,font_name='Times',font_style=0)
   t=text(x1+0.45,y1,'$(-11.5\deg,11.5\deg)$',color[1],font_size=font_size,font_name='Times',font_style=0)
-  t=text(x1+0.7,y1,'$[11.5\deg,max]$',color[2],font_size=font_size+1,font_name='Times',font_style=0)
+  t=text(x1+0.7,y1,'$[11.5\deg,35]$',color[2],font_size=font_size+1,font_name='Times',font_style=0)
   t=text(x1,y2,'$MLAT          [-30\deg,-10\deg]        (-10\deg,10\deg)         [10\deg,30\deg]$','k',$
     font_size=font_size,font_name='Times',font_style=0)
   s=symbol(x1+0.19,y2+0.005,'td',sym_size=sym_size)
