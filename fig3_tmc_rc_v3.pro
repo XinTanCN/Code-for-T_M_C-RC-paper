@@ -4,7 +4,7 @@
 
 pro fig3_tmc_rc_v3
   ;---Load data-------
-  fn='Data\Result_20231230_mlat30_ep085_cs1.cdf'
+  fn='Data\Result_20241029_mlat30_ep085_cs1_48.cdf'
   loadcdf,fn,'Epoch',epoch
   loadcdf,fn,'Jphi',j_phi
   loadcdf,fn,'L',l
@@ -32,8 +32,8 @@ pro fig3_tmc_rc_v3
   data_number_threshold=10
   dir='Figures\'
   if file_test(dir) eq 0 then file_mkdir,dir
-  
-  pos=where(l ge L_shell_min and l le L_shell_max)
+  pos=where((l ge L_shell_min) and (l le L_shell_max))
+;  pos=where((l ge L_shell_min) and (l le L_shell_max) and ((q le 1) or (mission ne 99)))
   epoch=epoch[pos]
   j_phi=j_phi[pos]
   l=l[pos]

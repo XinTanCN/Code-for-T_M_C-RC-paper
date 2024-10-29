@@ -3,7 +3,7 @@
 ;Last modified on 2 October 2024
 
 pro fig1_tmc_rc_v3
-  fn='Data\Result_20231122.cdf'
+  fn='Data\Result_20241029.cdf'
   loadcdf,fn,'Epoch',epoch
   loadcdf,fn,'MLAT',mlat
   loadcdf,fn,'Tilt',tilt
@@ -52,7 +52,7 @@ pro fig1_tmc_rc_v3
   s=symbol(x1+0.19,y2+0.005,'td',sym_size=sym_size)
   s=symbol(x1+0.465,y2+0.005,'x',sym_size=sym_size)
   s=symbol(x1+0.74,y2+0.002,'tu',sym_size=sym_size,/sym_filled)
-  fn='Figures\Figure1_l.png'
+  fn='Figures\Figure1.png'
 ;  w.save,fn,RESOLUTION=600,border=0,/overwrite
 ;  w.close
 ;  stop

@@ -10,7 +10,7 @@ pro fig1_tmc_rc_panel_v3,position,epoch,x1,y1,tilt1,mlat1,mission,i,n,color
   symbol1='tu'
   symbol2='x'
   symbol3='td'
-  m_txt=['Cluster 20010107-20191201','THEMIS 20100301-20121231','MMS 20150901-20161231']
+  m_txt=['Cluster 20010107-20191201','THEMIS 20080101-20131231','MMS 20150901-20161231']
   panel=['a','b','c']
   tilt_b=11.5
   mlat_b=10

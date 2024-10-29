@@ -4,7 +4,7 @@
 
 pro fig2r_tmc_rc_panel_v3,mission,position
 
-  fn='Data\Result_20231230_mlat30_ep085_cs1.cdf'
+  fn='Data\Result_20241029_mlat30_ep085_cs1_48.cdf'
   loadcdf,fn,'Epoch',epoch
   loadcdf,fn,'Size',sc
   loadcdf,fn,'Mission',m

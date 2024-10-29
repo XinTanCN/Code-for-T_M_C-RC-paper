@@ -25,8 +25,8 @@ pro fig2r_tmc_rc_v3
   endfor
   dir='Figures\'
   fn1=dir+'Figure 2R.png'
-;  w.save,fn1,RESOLUTION=600,border=0,/overwrite
-;  w.close
+  w.save,fn1,RESOLUTION=600,border=0,/overwrite
+  w.close
 ;  stop
   
   

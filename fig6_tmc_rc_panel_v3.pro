@@ -25,7 +25,7 @@ pro fig6_tmc_rc_panel_v3,position,mission,activity,RGB_TABLE,L_range
     end
   endcase
 
-  fn='Data\Result_20231230_mlat30_ep085_cs1.cdf'
+  fn='Data\Result_20241029_mlat30_ep085_cs1_48.cdf'
   loadcdf,fn,'Jphi',jphi
   loadcdf,fn,'L',l
   loadcdf,fn,'MLT',mlt

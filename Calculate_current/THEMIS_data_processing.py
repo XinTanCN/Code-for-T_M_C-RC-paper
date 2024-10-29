@@ -54,7 +54,7 @@ def average_data_themis(dataset,varname):
 
 #%% Resampling FGM & PMP data within a given time range at one-minute intervals
 
-trange=['2016-04-30','2016-05-01'] # Timespan
+trange=['2008-01-01','2008-07-01'] # Timespan
 probes=['a','d','e']
 fgm_varnames=['_fgs_gsm'] # Magnetic field data in GSE coordinate system, units: field nT,position km
 state_varnames=['_pos_gsm']

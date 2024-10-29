@@ -4,7 +4,7 @@
 
 pro fig4_tmc_rc_v3
   ;---Load data-------
-  fn='Data\Result_20231230_mlat30_ep085_cs1.cdf'
+  fn='Data\Result_20241029_mlat30_ep085_cs1_48.cdf'
   loadcdf,fn,'Epoch',epoch
   loadcdf,fn,'Jphi',j_phi
   loadcdf,fn,'L',l

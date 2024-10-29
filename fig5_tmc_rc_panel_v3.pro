@@ -7,7 +7,7 @@ pro fig5_tmc_rc_panel_v3,fn=fn,mlt_range,symh_range,L_range,symbol,sym_size,posi
   
   ;------载入数据-------
   if undefined(fn) then begin
-    fn='Data\Result_20231230_mlat30_ep085_cs1.cdf'
+    fn='Data\Result_20241029_mlat30_ep085_cs1_48.cdf'
   endif
   loadcdf,fn,'Epoch',epoch
   cdf_epoch,epoch,year,month,day,/break
@@ -168,7 +168,7 @@ pro fig5_tmc_rc_panel_v3,fn=fn,mlt_range,symh_range,L_range,symbol,sym_size,posi
     x_p=x[pos]
     y_p=y[pos]
     if medianflag then begin
-      cal_median,x_p,y_p,L_range
+      cal_median_v3,x_p,y_p,L_range
       p_b=plot(/current,/overplot,x_p,y_p,color[2],thick=thick,linestyle='-',symbol=symbol[2], sym_size=sym_size*5)
     endif
     p_b=plot(/current,/overplot,x_p,y_p,color[2],thick=thick,linestyle=linestyle,symbol=symbol[2], sym_size=sym_size);,$
@@ -180,7 +180,7 @@ pro fig5_tmc_rc_panel_v3,fn=fn,mlt_range,symh_range,L_range,symbol,sym_size,posi
     x_p=x[pos]
     y_p=y[pos]
     if medianflag then begin
-      cal_median,x_p,y_p,L_range
+      cal_median_v3,x_p,y_p,L_range
       p_b=plot(/current,/overplot,x_p,y_p,color[0],thick=thick,linestyle='-',symbol=symbol[0], sym_size=sym_size*5)
     endif
     p_b=plot(/current,/overplot,x_p,y_p,color[0],thick=thick,linestyle=linestyle,symbol=symbol[0], sym_size=sym_size);,$
@@ -192,7 +192,7 @@ pro fig5_tmc_rc_panel_v3,fn=fn,mlt_range,symh_range,L_range,symbol,sym_size,posi
     x_p=x[pos]
     y_p=y[pos]
     if medianflag then begin
-      cal_median,x_p,y_p,L_range
+      cal_median_v3,x_p,y_p,L_range
       p_b=plot(/current,/overplot,x_p,y_p,color[1],thick=thick,linestyle='-',symbol=symbol[1], sym_size=sym_size*5)
     endif
     p_b=plot(/current,/overplot,x_p,y_p,color[1],thick=thick,linestyle=linestyle,symbol=symbol[1], sym_size=sym_size);,$
@@ -215,7 +215,7 @@ pro fig5_tmc_rc_panel_v3,fn=fn,mlt_range,symh_range,L_range,symbol,sym_size,posi
   t=text(0.035,position[1]+(position[3]-position[1])*0.15,'$'+ydata+'$',font_size=font_size,font_name='Times',orientation=90,font_style=1)
 end
 
-pro cal_median,x,y,L_range
+pro cal_median_v3,x,y,L_range
   x_in=x
   y_in=y
   step=0.2
